@@ -7,6 +7,7 @@ const config = require('config');
 
 route = Router()
 
+// Queueing Patients
 route.post('/',[
     check('name',"Field is Required").not().isEmpty(),
     check('uid',"Field is Required").not().isEmpty(),

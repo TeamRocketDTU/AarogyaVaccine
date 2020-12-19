@@ -7,6 +7,7 @@ const config = require('config');
 
 route = Router()
 
+// Admin Sign Up
 route.post('/',[
     check('username',"Field is Required").not().isEmpty(),
     check('password',"Field is Required").not().isEmpty(),
@@ -55,6 +56,7 @@ route.post('/',[
     }
 })
 
+// Admin Login
 route.post('/login',[
     check('username',"Field is Required").not().isEmpty(),
     check('password',"Field is Required").not().isEmpty(),

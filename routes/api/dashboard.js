@@ -8,6 +8,7 @@ const config = require('config');
 
 route = Router()
 
+// Dashboard view (generic)
 route.get('/',async (req, res) => {
     try{
         let centres = await Facility.find()
@@ -22,6 +23,7 @@ route.get('/',async (req, res) => {
     }
 })
 
+// Dashboard Reset at the end of the Day
 route.post('/reset',auth, async (req, res) => {
     try{
         let centres = await Facility.find()

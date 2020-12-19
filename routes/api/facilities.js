@@ -5,6 +5,7 @@ const config = require('config');
 
 route = Router()
 
+// Adding Facilities
 route.post('/',[
     check('facID',"Field is Required").not().isEmpty(),
     check('facilityName',"Field is Required").not().isEmpty(),
