@@ -51,7 +51,11 @@ const UserSchema = new Schema({
     slotTime:{
         type: Number
     },
-    vaccinated:{
+    vaccinatedFirstTime:{
+        type: Boolean,
+        default: false
+    },
+    vaccinatedSecondTime:{
         type: Boolean,
         default: false
     }

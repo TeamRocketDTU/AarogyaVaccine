@@ -9,6 +9,9 @@ const FacilitySchema = new Schema({
     facilityName:{
         type: String
     },
+    facilityAddress:{
+        type: String
+    },
     slots:{
         type: [Number]
     },

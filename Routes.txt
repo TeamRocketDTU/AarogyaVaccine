@@ -1,0 +1,6 @@
+/api/admin => POST => Admin Sign Up
+/api/admin/login => POST => Admin Login
+/api/dashboard => GET => Dashboard Generic for viewing avaliable slots
+/api/dashboard => POST => Day Reset at the end of day
+/api/facility => POST => Adding new centres for extension
+/api/users => POST => New Patient for queuing
