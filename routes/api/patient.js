@@ -2,7 +2,7 @@ const { Router } = require('express')
 const { check, validationResult } = require('express-validator')
 const User = require('../../models/User')
 const Facility = require('../../models/Facility')
-const { getRandomString } = require('../../middleware/SystemID')
+// const {getRandomString} = require('../../middleware/SystemID')
 const config = require('config');
 
 route = Router()
@@ -55,7 +55,13 @@ route.post('/',[
             frontlineWorker
         })
 
-        sysID = "NN4NNN";
+        const ALPHANUMERIC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+        let buff = []
+        while (buff.length < 6) {
+            const charCode = parseInt(Math.random() * (36))
+            buff.push(ALPHANUMERIC.charAt(charCode))
+        }
+        user.sysID = buff.join('');
 
         let facID = (pincode % 100);
         let facility = await Facility.findOne({facID:facID.toString()})
