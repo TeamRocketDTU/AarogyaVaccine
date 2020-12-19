@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const FacilitySchema = new Schema({
-    facilityID:{
+    facID:{
         type: String,
         required: true
     },
@@ -15,7 +15,7 @@ const FacilitySchema = new Schema({
     maxCapacity:{
         type: Number,
         required: true,
-        default: 25
+        default: 16
     }
 })
 

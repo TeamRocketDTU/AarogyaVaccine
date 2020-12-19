@@ -49,12 +49,11 @@ const UserSchema = new Schema({
         ref: 'facility'
     },
     slotTime:{
-        type: Date,
-        default: Date.now
+        type: Number
     },
     vaccinated:{
         type: Boolean,
-        default: False
+        default: false
     }
 })
 
