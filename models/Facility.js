@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const FacilitySchema = new Schema({
     facID:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     facilityName:{
         type: String
@@ -19,7 +20,35 @@ const FacilitySchema = new Schema({
         type: Number,
         required: true,
         default: 16
-    }
+    },
+    occupants:[
+        {
+            name:{
+                type: String,
+            },
+            sysID:{
+                type: String,
+            },
+            age:{
+                type: Number,
+                required: true
+            },
+            gender:{
+                type: String,
+                required: true
+            },
+            commute:{
+                type: Boolean,
+                required: true
+            },
+            slotTime:{
+                type: Number
+            },
+            finalTime:{
+                type: Number
+            }
+        }
+    ]
 })
 
 module.exports = Facility = mongoose.model('facility',FacilitySchema)

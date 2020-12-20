@@ -33,6 +33,7 @@ route.post('/reset',auth, async (req, res) => {
         centres.forEach(async (centre)=>{
             let temp = await Facility.findOne({facID:centre.facID})
             temp.slots = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+            temp.occupants = []
             await temp.save()
         })
         return res.json(centres)
